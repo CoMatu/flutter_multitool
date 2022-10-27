@@ -1,7 +1,7 @@
 name: flutter_multitool
 description: Flutter "multitool" for developer
 version: 0.0.1
-#homepage: 
+repository: 'https://github.com/CoMatu/flutter_multitool.git'
 
 environment:
   sdk: '>=2.18.2 <3.0.0'

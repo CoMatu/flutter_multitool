@@ -110,8 +110,3 @@ extension WidgetMarginApp on Widget {
 
   Widget get marginZero => Container(margin: EdgeInsets.zero, child: this);
 }
-
-/// Allows you to insert widgets inside a CustomScrollView
-extension WidgetSliverBoxApp on Widget {
-  Widget get sliverBox => SliverToBoxAdapter(child: this);
-}

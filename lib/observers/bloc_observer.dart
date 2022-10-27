@@ -4,10 +4,11 @@ import 'package:bloc/bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 @sealed
-class AppBlocObserver extends BlocObserver {
-  factory AppBlocObserver.instance() => _singleton ??= AppBlocObserver._();
-  static AppBlocObserver? _singleton;
-  AppBlocObserver._();
+class MultitoolBlocObserver extends BlocObserver {
+  factory MultitoolBlocObserver.instance() =>
+      _singleton ??= MultitoolBlocObserver._();
+  static MultitoolBlocObserver? _singleton;
+  MultitoolBlocObserver._();
 
   @override
   void onCreate(BlocBase<Object?> bloc) {

@@ -5,3 +5,10 @@
 ## 0.0.2
 
 * Added licence
+
+## 0.0.3
+* Added text utilites:
+    - ```getNoun``` (for determine the correct declension of a word)
+    - ```parseLink``` (for parsing link from string)
+* Added custom InputFormatter for TextField:
+    - ```UpperCaseTextFormatter```

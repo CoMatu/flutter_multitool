@@ -1,6 +1,6 @@
 name: flutter_multitool
 description: Some widget extensions and common classes for improve developer experience
-version: 0.0.2
+version: 0.0.3
 repository: 'https://github.com/CoMatu/flutter_multitool.git'
 
 environment:

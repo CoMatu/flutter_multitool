@@ -12,3 +12,6 @@
     - ```parseLink``` (for parsing link from string)
 * Added custom InputFormatter for TextField:
     - ```UpperCaseTextFormatter```
+
+## 0.0.4
+* Added extensions for DateTime

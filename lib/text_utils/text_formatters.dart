@@ -5,15 +5,15 @@ class UpperCaseTextFormatter extends TextInputFormatter {
   @override
   TextEditingValue formatEditUpdate(
       TextEditingValue oldValue, TextEditingValue newValue) {
-    final _length = newValue.text.length;
-    if (_length == 1 ||
-        (newValue.text.length > 1 && newValue.text[_length - 2] == ' ')) {
+    final length = newValue.text.length;
+    if (length == 1 ||
+        (newValue.text.length > 1 && newValue.text[length - 2] == ' ')) {
       //находим символ по индексу
-      final oldChar = newValue.text[_length - 1];
+      final oldChar = newValue.text[length - 1];
       // капитализируем символ
       final newChar = oldChar.toUpperCase();
       // замена символа на заглавный
-      final newText = replaceCharAt(newValue.text, _length - 1, newChar);
+      final newText = replaceCharAt(newValue.text, length - 1, newChar);
 
       return TextEditingValue(
         text: newText,

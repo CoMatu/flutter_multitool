@@ -15,3 +15,6 @@
 
 ## 0.0.4
 * Added extensions for DateTime
+
+## 0.0.5
+* Added FireWorks and Dots Loader widgets

@@ -1,4 +1,5 @@
 import 'package:flutter/services.dart';
+import 'dart:math' as math;
 
 /// Форматирует текст при вводе - все слова начинаем с заглавной буквы
 class UpperCaseTextFormatter extends TextInputFormatter {
@@ -31,5 +32,41 @@ class UpperCaseTextFormatter extends TextInputFormatter {
     return oldString.substring(0, index) +
         newChar +
         oldString.substring(index + 1);
+  }
+}
+
+class DecimalTextInputFormatter extends TextInputFormatter {
+  DecimalTextInputFormatter({required this.decimalRange});
+
+  final int decimalRange;
+
+  @override
+  TextEditingValue formatEditUpdate(
+    TextEditingValue oldValue, // unused.
+    TextEditingValue newValue,
+  ) {
+    TextSelection newSelection = newValue.selection;
+    String truncated = newValue.text;
+
+    String value = newValue.text;
+
+    if (value.contains(".") &&
+        value.substring(value.indexOf(".") + 1).length > decimalRange) {
+      truncated = oldValue.text;
+      newSelection = oldValue.selection;
+    } else if (value == ".") {
+      truncated = "0.";
+
+      newSelection = newValue.selection.copyWith(
+        baseOffset: math.min(truncated.length, truncated.length + 1),
+        extentOffset: math.min(truncated.length, truncated.length + 1),
+      );
+    }
+
+    return TextEditingValue(
+      text: truncated,
+      selection: newSelection,
+      composing: TextRange.empty,
+    );
   }
 }

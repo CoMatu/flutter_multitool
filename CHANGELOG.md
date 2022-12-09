@@ -18,3 +18,9 @@
 
 ## 0.0.5
 * Added FireWorks and Dots Loader widgets
+
+## 0.0.6
+* Added DecimalTextInputFormatter for some digits input only
+
+## 0.0.7
+* Fixed DecimalTextInputFormatter for some digits input only

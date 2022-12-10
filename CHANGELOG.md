@@ -24,3 +24,6 @@
 
 ## 0.0.7
 * Fixed DecimalTextInputFormatter for some digits input only
+  
+## 0.0.8
+* Added ThousandsSeparatorInputFormatter

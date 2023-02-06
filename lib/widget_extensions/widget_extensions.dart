@@ -1,6 +1,16 @@
 import 'package:flutter/material.dart';
 
 extension WidgetAppExt on Widget {
+  Widget horizontalSwipeDetector({
+    required Function(DragUpdateDetails) onSwipe,
+    HitTestBehavior? behavior = HitTestBehavior.translucent,
+  }) =>
+      GestureDetector(
+        behavior: behavior,
+        onPanUpdate: onSwipe,
+        child: this,
+      );
+
   Widget gestureDetector({
     required VoidCallback onTap,
     HitTestBehavior? behavior = HitTestBehavior.translucent,

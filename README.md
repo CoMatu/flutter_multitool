@@ -35,6 +35,7 @@ Some widget extensions and common classes for improve developer experience.
 
 # Classes:
 * MultitoolBlocObserver
+* Either (aka Either from dartz library)
 
 # Widgets
 

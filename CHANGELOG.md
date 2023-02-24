@@ -30,3 +30,16 @@
 
 ## 0.0.9
 * Added AnimatedSelectorWidget
+
+## 0.1.0
+Added class **Either**, wich used to represent a value that has any one of the two specified types:
+```
+Either<Error, String> fetchData() {
+  try {
+    const result = 'Good result';
+    return const Either.right(result);
+  } catch (e) {
+    return Either.left(Error());
+  }
+}
+```

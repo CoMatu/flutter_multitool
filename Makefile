@@ -3,3 +3,6 @@ test-pub:
 
 publish:
 		dart pub publish
+
+gen:
+		dart run build_runner build
